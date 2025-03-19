@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TestEmployeeType {
          public static void main(String[] args) {
-                 DBEmployeeType dBEmployeeType = new DBEmployeeType();
+             DBEmployeeType dBEmployeeType = new DBEmployeeType();
              // INSERTAR
              EmployeeType employeeType = new EmployeeType(6, "SUBDIRECTOR");
              //dBEmployeeType.insert(employeeType);

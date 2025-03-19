@@ -28,7 +28,7 @@ public class DBEmployeeType  extends  DBConnection{
                            preparedStatement.setString(1, employeeType.getDescript());
                            preparedStatement.executeUpdate();
                            preparedStatement.close();
-                   } catch (Exception e) {
+                   } catch (SQLException e) {
                            MessageUtils.ShowErrorMessage("ERROR al insertar tipo de empleado..." 
                                    +e.getMessage());
                    }
@@ -47,7 +47,7 @@ public class DBEmployeeType  extends  DBConnection{
                            preparedStatement.setInt(2, employeeType.getId());
                            preparedStatement.executeUpdate();
                            preparedStatement.close();
-                   } catch (Exception e) {
+                   } catch (SQLException e) {
                            MessageUtils.ShowErrorMessage("ERROR al actualizar tipo empleado..." 
                                    +e.getMessage());
                    }
