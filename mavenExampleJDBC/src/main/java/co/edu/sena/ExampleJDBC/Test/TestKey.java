@@ -4,7 +4,7 @@
  */
 package co.edu.sena.ExampleJDBC.Test;
 
-import co.edu.sena.ExampleDB.DBKey;
+import co.edu.sena.ExampleJDBC.ExampleDB.DBKey;
 import co.edu.sena.ExampleJDBC.model.Key;
 import java.util.List;
 
