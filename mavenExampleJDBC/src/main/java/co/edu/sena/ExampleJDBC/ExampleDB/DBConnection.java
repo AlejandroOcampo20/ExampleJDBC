@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+<<<<<<< Updated upstream
 package co.edu.sena.ExampleJDBC.ExampleDB;
+=======
+package co.edu.sena.ExampleDB;
+>>>>>>> Stashed changes
 
 import co.edu.sena.ExampleJDBC.Utils.MessageUtils;
 import java.sql.Connection;
@@ -13,7 +17,11 @@ import java.sql.Statement;
 /**
  * Date: 13/03/2025
  * @author alejo
+<<<<<<< Updated upstream
  * Objetive: Clade principal para conexion a dabe de datos
+=======
+ * Objetive: Clase principal para conexion a dabe de datos
+>>>>>>> Stashed changes
  */
 public class DBConnection {
     public static Connection connection;
