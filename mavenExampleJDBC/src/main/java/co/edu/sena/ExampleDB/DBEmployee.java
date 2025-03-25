@@ -15,8 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Date:20/03/2025
  *
- * @author alejo
+ * @author alejo Objetive: permite consultas y transacciones en la tabla
+ * employee
  */
 public class DBEmployee extends DBConnection {
 
@@ -102,44 +104,44 @@ public class DBEmployee extends DBConnection {
             }
             resultset.close();
         } catch (SQLException e) {
-                MessageUtils.ShowErrorMessage("ERROr al realizar la consulta"
-                + e.getMessage());
+            MessageUtils.ShowErrorMessage("ERROr al realizar la consulta"
+                    + e.getMessage());
         } finally {
             disconnect();
         }
         return results;
     }
-    
-    public  Employee findById (long document){
-         Employee employee = null;
-         DBEmployeeType dbet = new DBEmployeeType();
-         
-         try {
-                connect();
-                String sql = "SELECT * FROM employee WHERE document = ? ";
-                PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setLong(1, document);
-                ResultSet resultset = preparedStatement.executeQuery();
-                // .next para recorrer todos los resultados
-                if (resultset.next()){
-                    employee = new Employee();
-                    employee.setDocument(resultset.getLong("document"));
-                    employee.setFullname(resultset.getString("fullname"));
-                    employee.setAddres(resultset.getString("direccion"));
-                    employee.setPhone(resultset.getString("telefono"));
-                    
-                    //FK
-                    EmployeeType employeeType = dbet.findById(resultset.getInt("type_id"));
-                    employee.setEmployeeType(employeeType);
-                    
-                }
-                resultset.close();
+
+    public Employee findById(long document) {
+        Employee employee = null;
+        DBEmployeeType dbet = new DBEmployeeType();
+
+        try {
+            connect();
+            String sql = "SELECT * FROM employee WHERE document = ? ";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setLong(1, document);
+            ResultSet resultset = preparedStatement.executeQuery();
+            // .next para recorrer todos los resultados
+            if (resultset.next()) {
+                employee = new Employee();
+                employee.setDocument(resultset.getLong("document"));
+                employee.setFullname(resultset.getString("fullname"));
+                employee.setAddres(resultset.getString("direccion"));
+                employee.setPhone(resultset.getString("telefono"));
+
+                //FK
+                EmployeeType employeeType = dbet.findById(resultset.getInt("type_id"));
+                employee.setEmployeeType(employeeType);
+
+            }
+            resultset.close();
         } catch (SQLException e) {
-            MessageUtils.ShowErrorMessage("ERROR al consultar el tipo de empleado" 
-                            +e.getMessage());
+            MessageUtils.ShowErrorMessage("ERROR al consultar el tipo de empleado"
+                    + e.getMessage());
         } finally {
-             disconnect();
+            disconnect();
         }
-         return employee;
+        return employee;
     }
 }

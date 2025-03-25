@@ -7,6 +7,7 @@ package co.edu.sena.ExampleJDBC.model;
 /**
  *
  * @author alejo
+ * Objetive: representa la tabla key
  */
 public class Key {
         private int id;

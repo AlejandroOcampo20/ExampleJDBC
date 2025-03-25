@@ -13,7 +13,7 @@ import java.sql.Statement;
 /**
  * Date: 13/03/2025
  * @author alejo
- * Objetive: Clade principal para conexion a dabe de datos
+ * Objetive: Clase principal para conexion a dabe de datos
  */
 public class DBConnection {
     public static Connection connection;
