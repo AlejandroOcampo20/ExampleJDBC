@@ -5,6 +5,7 @@
 package co.edu.sena.ExampleDB;
 
 import static co.edu.sena.ExampleDB.DBConnection.connection;
+import co.edu.sena.ExampleJDBC.ExampleDB.DBEmployeeType;
 import co.edu.sena.ExampleJDBC.Utils.MessageUtils;
 import co.edu.sena.ExampleJDBC.model.Employee;
 import co.edu.sena.ExampleJDBC.model.EmployeeType;

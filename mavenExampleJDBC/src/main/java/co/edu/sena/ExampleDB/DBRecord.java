@@ -6,6 +6,7 @@ package co.edu.sena.ExampleDB;
 
 import static co.edu.sena.ExampleDB.DBConnection.connection;
 import static co.edu.sena.ExampleDB.DBConnection.statement;
+import co.edu.sena.ExampleJDBC.ExampleDB.DBKey;
 import co.edu.sena.ExampleJDBC.Utils.MessageUtils;
 import co.edu.sena.ExampleJDBC.model.Employee;
 import co.edu.sena.ExampleJDBC.model.Key;
@@ -128,7 +129,7 @@ public class DBRecord extends DBConnection {
      public Record findById(int id) {
         Record record = null;
         DBEmployee dbe = new DBEmployee();
-        DBKey dbk = new DBKey();
+         DBKey dbk = new DBKey();
 
         try {
             connect();
