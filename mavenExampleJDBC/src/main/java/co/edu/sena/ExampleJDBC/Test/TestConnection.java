@@ -4,7 +4,7 @@
  */
 package co.edu.sena.ExampleJDBC.Test;
 
-import co.edu.sena.ExampleDB.DBConnection;
+import co.edu.sena.ExampleJDBC.ExampleDB.DBConnection;
 
 /**
  * 13/03/2025
