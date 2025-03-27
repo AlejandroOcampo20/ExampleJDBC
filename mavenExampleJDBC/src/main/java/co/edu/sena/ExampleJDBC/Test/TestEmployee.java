@@ -4,7 +4,8 @@
  */
 package co.edu.sena.ExampleJDBC.Test;
 
-import co.edu.sena.ExampleDB.DBEmployee;
+
+import co.edu.sena.ExampleJDBC.ExampleDB.DBEmployee;
 import co.edu.sena.ExampleJDBC.ExampleDB.DBEmployeeType;
 import co.edu.sena.ExampleJDBC.model.Employee;
 import co.edu.sena.ExampleJDBC.model.EmployeeType;

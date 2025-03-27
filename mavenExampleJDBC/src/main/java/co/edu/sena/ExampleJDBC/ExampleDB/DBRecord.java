@@ -2,11 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package co.edu.sena.ExampleDB;
+package co.edu.sena.ExampleJDBC.ExampleDB;
 
-import static co.edu.sena.ExampleDB.DBConnection.connection;
-import static co.edu.sena.ExampleDB.DBConnection.statement;
-import co.edu.sena.ExampleJDBC.ExampleDB.DBKey;
 import co.edu.sena.ExampleJDBC.Utils.MessageUtils;
 import co.edu.sena.ExampleJDBC.model.Employee;
 import co.edu.sena.ExampleJDBC.model.Key;

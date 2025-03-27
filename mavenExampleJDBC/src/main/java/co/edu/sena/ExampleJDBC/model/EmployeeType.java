@@ -36,6 +36,11 @@ public class EmployeeType {
     public void setDescript(String descript) {
         this.descript = descript;
     }
+
+    @Override
+    public String toString() {
+        return  descript;
+    }
     
     
 }

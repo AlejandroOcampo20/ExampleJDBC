@@ -4,7 +4,7 @@
  */
 package co.edu.sena.ExampleJDBC.Controller;
 
-import co.edu.sena.ExampleDB.DBEmployeeType;
+import co.edu.sena.ExampleJDBC.ExampleDB.DBEmployeeType;
 import co.edu.sena.ExampleJDBC.model.EmployeeType;
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class EmployeeTypeController implements IEmployeeTypeController{
 
-    private DBEmployeeType dbe = new DBEmployeeType();
+    private DBEmployeeType dbet = new DBEmployeeType();
     
     @Override
     public void insert(EmployeeType employeeType) throws Exception {
@@ -28,7 +28,7 @@ public class EmployeeTypeController implements IEmployeeTypeController{
             throw new Exception("La descripcion es obligatoria");
         }
         //Insertar
-        dbe.insert(employeeType);
+        dbet.insert(employeeType);
     }
 
     @Override
@@ -47,13 +47,13 @@ public class EmployeeTypeController implements IEmployeeTypeController{
         }
         
         //Consultar si el employeeType existe en la DB
-        EmployeeType employeeTypeExists = dbe.findById(employeeType.getId());
+        EmployeeType employeeTypeExists = dbet.findById(employeeType.getId());
         if (employeeTypeExists == null)
         {
             throw new Exception("El tipo de empleado no existe");
         }
         //Actualizar
-        dbe.update(employeeType); 
+        dbet.update(employeeType); 
     }
 
     @Override
@@ -62,19 +62,19 @@ public class EmployeeTypeController implements IEmployeeTypeController{
         {
             throw new Exception("El id es obligatorio");
         }
-        EmployeeType employeeTypeExists = dbe.findById(id);
+        EmployeeType employeeTypeExists = dbet.findById(id);
         if (employeeTypeExists == null)
         {
             throw new Exception("El tipo de empleado no existe");
         }
         
         //eliminar
-        dbe.delete(id);
+        dbet.delete(id);
     }
 
     @Override
     public List<EmployeeType> findAll() throws Exception {
-        return dbe.findAll();
+        return dbet.findAll();
     }
 
     @Override
@@ -82,7 +82,7 @@ public class EmployeeTypeController implements IEmployeeTypeController{
         if (Id == 0) {
             throw new Exception("El id es obligatorio");
         }
-        return dbe.findById(Id);
+        return dbet.findById(Id);
     
     }
     

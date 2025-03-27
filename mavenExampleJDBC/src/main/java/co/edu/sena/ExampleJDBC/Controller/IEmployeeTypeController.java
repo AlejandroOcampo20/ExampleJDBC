@@ -8,7 +8,7 @@ import co.edu.sena.ExampleJDBC.model.EmployeeType;
 import java.util.List;
 
 /**
- *
+ *Date: 25/03/2025
  * @author alejo
  */
 public interface IEmployeeTypeController {
