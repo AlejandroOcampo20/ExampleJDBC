@@ -32,7 +32,7 @@ public class JFrameHome extends javax.swing.JFrame {
         jButtonKey = new javax.swing.JButton();
         jButtonRecord = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,24 +44,44 @@ public class JFrameHome extends javax.swing.JFrame {
         jButtonEmployeeType.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonEmployeeType.setForeground(new java.awt.Color(0, 0, 0));
         jButtonEmployeeType.setText("Tipos de funcionarios");
+        jButtonEmployeeType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEmployeeTypeActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButtonEmployeeType, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 86, -1, -1));
 
         jButtonEmployee.setBackground(new java.awt.Color(255, 255, 255));
         jButtonEmployee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonEmployee.setForeground(new java.awt.Color(0, 0, 0));
         jButtonEmployee.setText("Funcionarios");
+        jButtonEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEmployeeActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButtonEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 152, 150, -1));
 
         jButtonKey.setBackground(new java.awt.Color(255, 255, 255));
         jButtonKey.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonKey.setForeground(new java.awt.Color(0, 0, 0));
         jButtonKey.setText("LLaves");
+        jButtonKey.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKeyActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButtonKey, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 219, 150, -1));
 
         jButtonRecord.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRecord.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonRecord.setForeground(new java.awt.Color(0, 0, 0));
         jButtonRecord.setText("Registros");
+        jButtonRecord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRecordActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButtonRecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 288, 150, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -69,8 +89,8 @@ public class JFrameHome extends javax.swing.JFrame {
         jLabel1.setText("MASTER KEY 1.0");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 30, 147, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/sena/ExampleJDBC/Resource/imagen-javaa.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 270, 160));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/sena/ExampleJDBC/ExampleDB/View/imagen-javaa.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 230, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,6 +106,30 @@ public class JFrameHome extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonEmployeeTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmployeeTypeActionPerformed
+        JFrameEmployeeType view = new JFrameEmployeeType();
+        view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonEmployeeTypeActionPerformed
+
+    private void jButtonEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmployeeActionPerformed
+       JFrameEmployee view = new JFrameEmployee();
+       view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonEmployeeActionPerformed
+
+    private void jButtonKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKeyActionPerformed
+        JFrameKey view = new JFrameKey();
+        view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonKeyActionPerformed
+
+    private void jButtonRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRecordActionPerformed
+        JFrameRecord view = new JFrameRecord();
+        view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonRecordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,7 +172,7 @@ public class JFrameHome extends javax.swing.JFrame {
     private javax.swing.JButton jButtonKey;
     private javax.swing.JButton jButtonRecord;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

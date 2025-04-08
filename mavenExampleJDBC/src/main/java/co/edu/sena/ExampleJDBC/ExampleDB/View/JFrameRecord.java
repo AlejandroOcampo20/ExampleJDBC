@@ -120,6 +120,7 @@ public class JFrameRecord extends javax.swing.JFrame {
         jButtonClear = new javax.swing.JButton();
         jScrollPaneRecord = new javax.swing.JScrollPane();
         jTableRecords = new javax.swing.JTable();
+        jLabelHome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TableRecord");
@@ -280,6 +281,15 @@ public class JFrameRecord extends javax.swing.JFrame {
         });
         jScrollPaneRecord.setViewportView(jTableRecords);
 
+        jLabelHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/sena/ExampleJDBC/ExampleDB/View/home_black.png"))); // NOI18N
+        jLabelHome.setText("jLabel2");
+        jLabelHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelHomeMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -308,11 +318,17 @@ public class JFrameRecord extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jScrollPaneRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 844, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
+                .addComponent(jLabelHome)
+                .addGap(4, 4, 4)
                 .addComponent(jLabel1)
                 .addGap(111, 111, 111)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -423,6 +439,12 @@ public class JFrameRecord extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
+    private void jLabelHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHomeMouseClicked
+        JFrameHome view = new JFrameHome();
+        view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jLabelHomeMouseClicked
+
      public void clear()
     {
         jTextFieldId.setText("");
@@ -486,6 +508,7 @@ public class JFrameRecord extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDate;
     private javax.swing.JLabel jLabelEmployee;
     private javax.swing.JLabel jLabelEndTime;
+    private javax.swing.JLabel jLabelHome;
     private javax.swing.JLabel jLabelId;
     private javax.swing.JLabel jLabelKey;
     private javax.swing.JLabel jLabelStarTime;
